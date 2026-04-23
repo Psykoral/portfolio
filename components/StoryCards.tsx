@@ -30,7 +30,7 @@ export function StoryCards() {
             background: "#0f172a"
           }}
         >
-          <h3 style={{ marginTop: 0 }}>{card.title}</h3>
+          <h2 style={{ marginTop: 0, fontSize: "1.17em" }}>{card.title}</h2>
           <p style={{ marginBottom: 0, color: "#cbd5e1" }}>{card.text}</p>
         </article>
       ))}
