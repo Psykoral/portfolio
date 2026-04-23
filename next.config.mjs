@@ -1,6 +1,11 @@
 import path from "node:path";
 
-const configuredBasePath = process.env.NEXT_PUBLIC_BASE_PATH?.trim();
+const rawConfiguredBasePath = process.env.NEXT_PUBLIC_BASE_PATH?.trim();
+const configuredBasePath = rawConfiguredBasePath
+  ? rawConfiguredBasePath.startsWith("/")
+    ? rawConfiguredBasePath
+    : `/${rawConfiguredBasePath}`
+  : undefined;
 const inferredRepoName =
   process.env.GITHUB_REPOSITORY?.split("/")[1] ??
   process.env.npm_package_name?.split("/").pop() ??
