@@ -12,8 +12,8 @@ const headingFont = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "AI-Assisted Modernization",
-  description: "An anonymized case study of how I used AI to upgrade legacy applications, restore workflows, and add automation around delivery."
+  title: "Jim O'Harra-Sutton | AI Solutions Architect",
+  description: "Portfolio for Jim O'Harra-Sutton, an AI solutions architect and technical product leader with Adobe, Absorb, AEM, SEO, analytics, and modernization experience."
 };
 
 export default function RootLayout({
@@ -57,7 +57,7 @@ export default function RootLayout({
           h1, h2, h3 {
             font-family: var(--font-heading), serif;
             font-weight: 600;
-            letter-spacing: -0.02em;
+            letter-spacing: 0;
           }
         `}</style>
       </head>

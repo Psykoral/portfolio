@@ -1,15 +1,15 @@
 const cards = [
   {
-    title: "Frontend modernization",
-    text: "Frontend upgrades, structure cleanup, and a more reliable development workflow."
+    title: "AI transformation",
+    text: "Private LLMs, AI-assisted coding workflows, CMS automation, and legacy modernization."
   },
   {
-    title: "API and automation",
-    text: "Backend refactors paired with recurring jobs, operational logging, and workflow automation."
+    title: "Platform engineering",
+    text: "React, Next.js, AEM, Contentful, CI/CD, analytics, SEO, and production web systems."
   },
   {
-    title: "Legacy platform recovery",
-    text: "Compatibility fixes and workflow restoration work for an older PHP codebase."
+    title: "Team leadership",
+    text: "Management across development, website, and marketing automation teams."
   }
 ];
 
@@ -25,7 +25,7 @@ export function StoryCards() {
           key={card.title}
           style={{
             border: "1px solid #1e293b",
-            borderRadius: 20,
+            borderRadius: 8,
             padding: 20,
             background: "#0f172a"
           }}

@@ -1,5 +1,8 @@
 import { ExampleTabs } from "@/components/ExampleTabs";
+import { CapabilityMatrix } from "@/components/CapabilityMatrix";
+import { ExperienceTimeline } from "@/components/ExperienceTimeline";
 import { StoryCards } from "@/components/StoryCards";
+import { githubUrl, impactStats, linkedinUrl } from "@/data/profile";
 
 export default function HomePage() {
   const generatedAtDate = new Date();
@@ -12,8 +15,8 @@ export default function HomePage() {
     <main style={{ maxWidth: 1200, margin: "0 auto", padding: "48px 24px 80px" }}>
       <section style={{
         padding: 32,
-        borderRadius: 28,
-        background: "linear-gradient(135deg, #0f172a, #111827 55%, #082f49)",
+        borderRadius: 8,
+        background: "#0b1120",
         border: "1px solid #1e293b",
         marginBottom: 28
       }}>
@@ -27,35 +30,66 @@ export default function HomePage() {
           fontWeight: 700,
           marginBottom: 16
         }}>
-          AI-assisted modernization
+          AI Solutions Architect | Technical Product Leader
         </div>
         <h1 style={{ fontSize: 48, lineHeight: 1.05, margin: "0 0 12px" }}>
-          How I migrated failing, error ridden, legacy projects to modern masterpieces, <i>in a matter of hours not months</i>, with AI in the loop
+          Jim O&apos;Harra-Sutton builds the bridge between AI transformation, platform engineering, and teams that ship.
         </h1>
         <p style={{ maxWidth: 820, fontSize: 20, color: "#cbd5e1", lineHeight: 1.5 }}>
-          This project displays examples how I used AI tools to upgrade older frontend and
-          backend systems, rebuilt fragile workflows, added automation around recurring
-          operational tasks, and turned legacy code into maintainable delivery pipelines.
+          My recent AI modernization work is one part of a broader portfolio: 20+ years leading
+          Adobe.com engineering, managing web and marketing automation teams at Absorb, and
+          combining architecture, product judgment, SEO, analytics, design collaboration, and
+          delivery systems into production web experiences.
         </p>
-        <p>
-          Like what you see? I could do this for your company! <a href={"https://www.linkedin.com/in/jimoharrasutton/"} target={"_blank"} rel={"noreferrer"} aria-label={"Jim O'Harra-Sutton on LinkedIn"}>LinkedIn -{">"} Jim O&apos;Harra-Sutton</a>
+        <div style={{
+          display: "grid",
+          gap: 12,
+          gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
+          margin: "24px 0"
+        }}>
+          {impactStats.map((stat) => (
+            <div key={stat.label} style={{
+              border: "1px solid #1e293b",
+              borderRadius: 8,
+              padding: 14,
+              background: "#020617"
+            }}>
+              <strong style={{ display: "block", fontSize: 28, lineHeight: 1 }}>{stat.value}</strong>
+              <span style={{ color: "#cbd5e1", fontSize: 13, fontWeight: 700 }}>{stat.label}</span>
+            </div>
+          ))}
+        </div>
+        <p style={{ marginBottom: 0 }}>
+          <a href={linkedinUrl} target={"_blank"} rel={"noreferrer"} aria-label={"Jim O'Harra-Sutton on LinkedIn"}>LinkedIn</a>
+          {" | "}
+          <a href={githubUrl} target={"_blank"} rel={"noreferrer"} aria-label={"Jim O'Harra-Sutton on GitHub"}>GitHub</a>
         </p>
       </section>
 
       <StoryCards />
 
+      <CapabilityMatrix />
+
+      <ExperienceTimeline />
+
       <section style={{ marginTop: 28 }}>
+        <div style={{ marginBottom: 18 }}>
+          <p style={{ color: "#38bdf8", fontWeight: 800, margin: "0 0 8px" }}>Featured Case Study</p>
+          <h2 style={{ fontSize: 34, lineHeight: 1.1, margin: 0 }}>
+            Recent AI-assisted modernization work.
+          </h2>
+        </div>
         <ExampleTabs />
       </section>
 
       <section style={{
         marginTop: 28,
         padding: 24,
-        borderRadius: 24,
+        borderRadius: 8,
         border: "1px solid #1e293b",
         background: "#0f172a"
       }}>
-        <h2 style={{ marginTop: 0 }}>This must have taken you months, right?</h2>
+        <h2 style={{ marginTop: 0 }}>This must have taken months, right?</h2>
         <p style={{ color: "#cbd5e1", lineHeight: 1.7 }}>
           Not even close. The full frontend migration into Next.js took about 10 hours between two days, and the
           PHP modernization work took about 4 hours to not only resolve all the out of date functions,
@@ -89,7 +123,7 @@ export default function HomePage() {
           into play. I make sure the code is concise, clean, reusable and developer friendly. I refine the prompts to
           ask Codex further questions that help identify any issues there and keep doing so until it&apos;s in a state that
           I&apos;m happy with. I also make sure the site is user friendly to devices, accessibility readers, and even page
-          load speeds are kept in the 90+ range. Any major issues that wold slow the page down (which also affects SEO
+          load speeds are kept in the 90+ range. Any major issues that would slow the page down (which also affects SEO
           value, by the way) are identified and addressed.
         </p>
         <h2 style={{ marginTop: 0 }}>OK, so it was fast because you already had something to work with?</h2>
